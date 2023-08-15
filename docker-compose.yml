@@ -1,0 +1,13 @@
+version: '1.0.0'
+services:
+  node_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      TZ: "Asia/Jakarta"
+    volumes:
+      - ./app:/app
+    command: npm run start:prod
