@@ -43,8 +43,6 @@ export class FaceApiAdapter implements IFaceApiPort {
     await Promise.all([
       nets.tinyFaceDetector.loadFromDisk(join(__dirname, '../../..', 'models')),
       nets.faceLandmark68TinyNet.loadFromDisk(join(__dirname, '../../..', 'models')),
-      // nets.faceRecognitionNet.loadFromDisk(join(__dirname, '../../..', 'models')),
-      // nets.faceLandmark68Net.loadFromDisk(join(__dirname, '../../..', 'models'))
     ]);
   }
 
