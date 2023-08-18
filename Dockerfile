@@ -1,20 +1,13 @@
-FROM node:18-alpine
+FROM leehojun/nest-face-detect:1.0.0
 
-RUN apk add --update tzdata
 ENV TZ=Asia/Seoul
-
-RUN apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make build-base cairo-dev pango-dev libjpeg-turbo-dev giflib-dev librsvg-dev pixman-dev
-
-RUN apk --no-cache add pkgconfig
-
-RUN mkdir -p /var/app
 
 WORKDIR /var/app
 
 COPY . .
 
-RUN npm install --silent
+RUN npm install --silent && \
+    npm run build
 
-RUN npm run build
-
+# Start the application
 CMD ["npm", "run", "start:prod"]
