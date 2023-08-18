@@ -46,16 +46,8 @@ $ npm run start:prod
 
 To run the app using Docker, you can follow these steps:
 
-1. Build the Docker image:
 ```
-$ docker build -t your-image-name
-```
-
-
-2. Run the Docker container:
-
-```
-$ docker run -p 3000:3000 -d your-image-name
+$ docker-compose up --build -d
 ```
 
 The app should now be accessible at http://localhost:3000.
