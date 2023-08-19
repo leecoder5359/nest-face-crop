@@ -4,9 +4,10 @@
 
 <h1 align="center">API with Face Detection and Crop Functionality</h1>
 
-<p align="center">
-  <img src="img_1.png" alt="Face Detection Example" />
-</p>
+<div align="center">
+<img class="image" src="img_1.png" alt="Image A" />
+<img class="image" src="img.png" alt="Image B" />
+</div>
 
 <p align="center">
   <strong>API equipped with face detection and crop function using NEST framework.</strong>
